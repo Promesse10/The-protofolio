@@ -1,0 +1,176 @@
+/* General header styling */
+.header {
+ 
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Stick to the top of the viewport */
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header is above other content */
+}
+.header.scrolled .nav-menu {
+  background-color: #282c343f; /* Example color, adjust as needed */
+  transition: background-color 0.3s ease;
+  color: white;
+  border-radius: 36px;
+
+}
+.header.scrolled .nav-menu .nav-link {
+  color: white;
+}
+.nav-item.active .nav-link {
+ background-color: #282c34;
+ color: white;
+ border-radius: 36px;
+ 
+}
+.nav-item .nav-link {
+  color: #000000; /* Default link color */
+  transition: color 0.3s ease;
+  background:#a5c7dd;
+  border-radius: 36px;
+  
+}
+
+.nav-item:hover .nav-link {
+  color: #ffffff; /* Example hover color, adjust as needed */
+  
+  border-radius: 36px;
+}
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: end;
+  margin-right: 5%;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Logo styling */
+
+
+/* Menu container */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu items */
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Links styling */
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Link hover and active state */
+.nav-link:hover,
+.nav-link:active {
+  background:#a5c7dd;
+  color: #fdfdfd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* Hide the menu by default */
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #282c34;
+    position: absolute;
+    top: 70px; /* Adjust based on header height */
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+/* Header.css */
+/* Header.css */
+/* Header.css */
+/* Header.css */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:#bce2fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.triangle-loader {
+  position: relative;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #000; /* Adjust color as needed */
+  animation: spin 1.5s linear infinite;
+}
+
+.triangle:nth-child(2) {
+  border-bottom-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity for the second triangle */
+  animation-delay: -0.75s; /* Adjust delay to create the spinning effect */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

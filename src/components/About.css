@@ -1,0 +1,62 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #bce2fa;
+  box-sizing: border-box;
+  height: 100vh;
+}
+.poly2{
+  width: 52%;
+  position: absolute;
+  left: 0;
+top: 0;
+  
+}
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  text-align: left; /* Changed to left for better readability with card layout */
+  max-width: 800px;
+  background: #1f2a3023;
+  border: 1px solid  #1f2a30;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Ensures the content stays within the rounded corners */
+  padding: 1.5rem;
+  margin-left: 12%;
+  margin-top: 6%;
+}
+
+.about-content img {
+  /* Adjust size as needed */
+  height: 350px; /* Adjust size as needed */
+  /* Circular image */
+  
+   /* Spacing between image and text */
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1f2a30;
+  
+}
+
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
