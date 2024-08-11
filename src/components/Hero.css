@@ -1,7 +1,7 @@
 /* Hero.css */
 .hero {
   position: relative;
-  padding: 50px 20px;
+  padding: 100px 40px;
   overflow: hidden;
   background-color: #bbe1fa;
   height: 85%;
@@ -14,28 +14,28 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 80%; /* Adjust this value based on how much space you want the image to take up */
+  width: 80%;
   height: 100%;
   overflow: hidden;
 }
 
 .hero-image img {
   width: 100%;
-  height: auto; /* Adjust height based on aspect ratio */
+  height: auto;
 }
 
 .hero2-image {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 60%; /* Adjust this value based on how much space you want the image to take up */
+  width: 80%;
   height: 100%;
   overflow: hidden;
 }
 
 .hero2-image img {
   width: 100%;
-  height: auto; /* Adjust height based on aspect ratio */
+  height: auto;
   margin-top: 5%;
 }
 
@@ -58,9 +58,9 @@ h3 {
   position: relative;
   margin-bottom: 10%;
   text-align: left;
-  z-index: 1; /* Ensures the content is above the image */
-  color: #fff; /* White text color for contrast */
-  max-width: 800px; /* Adjust based on your layout */
+  z-index: 1;
+  color: #fff;
+  max-width: 800px;
   left: 0;
 }
 
@@ -75,7 +75,7 @@ h3 {
 }
 
 .hero-profile img {
-  height: auto; /* Adjust height based on aspect ratio */
+  height: auto;
   margin-bottom: 22%;
 }
 
@@ -97,43 +97,104 @@ h3 {
 }
 
 /* Mobile phones */
-@media (max-width: 989px) {
-  .hero-profile img {
-    height: 823px; /* Adjust height based on aspect ratio */
-    margin-bottom: 22%;
-    margin-left: 30%;
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px; /* Adjust padding for mobile */
+    
   }
 
-  .hero2-image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 80%; /* Adjust this value based on how much space you want the image to take up */
-    height: 100%;
-    overflow: hidden;
+  .hero-image, .hero2-image {
+    width: 100%; /* Full width for mobile */
+    height: auto;
   }
- .hero-content p {
-font-size: 12px;
+
+  .hero-profile {
+    width: 80%; /* Adjust profile width for mobile */
+  }
+
+  .hero-profile img {
+    width: 80%; /* Adjust width for mobile */
+    max-width: 200px; /* Adjust maximum width for mobile */
+    min-width: 150px; /* Adjust minimum width for mobile */
+  }
+
+  .hero-content h1 {
+    font-size: 28px; /* Adjust font size for mobile */
+  }
+
+  .hero-content p {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  .btn-resume {
+    padding: 10px 20px; /* Adjust button padding for mobile */
+    font-size: 14px; /* Adjust button font size for mobile */
   }
 }
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 16px;
+  .hero {
+    padding: 90px 30px; /* Adjust padding for tablets */
+  }
+
+  .hero-content h1 {
+    font-size: 32px; /* Adjust font size for tablets */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Adjust font size for tablets */
+  }
+
+  .btn-resume {
+    padding: 12px 24px; /* Adjust button padding for tablets */
+    font-size: 16px; /* Adjust button font size for tablets */
+  }
+  .hero-profile img{
+
+    width: 93%;
+    height: 100%;
+    margin-top: 50%;
+    
   }
 }
 
 /* Small laptops */
 @media (min-width: 1280px) and (max-width: 1440px) {
-  body {
-    font-size: 18px;
+  .hero {
+    padding: 100px 40px; /* Default padding for small laptops */
+  }
+
+  .hero-content h1 {
+    font-size: 36px; /* Adjust font size for small laptops */
+  }
+
+  .hero-content p {
+    font-size: 18px; /* Adjust font size for small laptops */
+  }
+
+  .btn-resume {
+    padding: 14px 28px; /* Adjust button padding for small laptops */
+    font-size: 18px; /* Adjust button font size for small laptops */
   }
 }
 
 /* Large desktops */
 @media (min-width: 1440px) {
-  body {
-    font-size: 20px;
+  .hero {
+    padding: 120px 60px; /* Adjust padding for large desktops */
+  }
+
+  .hero-content h1 {
+    font-size: 39px; /* Default font size for large desktops */
+  }
+
+  .hero-content p {
+    font-size: 20px; /* Default font size for large desktops */
+  }
+
+  .btn-resume {
+    padding: 16px 32px; /* Adjust button padding for large desktops */
+    font-size: 20px; /* Adjust button font size for large desktops */
   }
 }

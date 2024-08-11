@@ -1,6 +1,5 @@
 /* General header styling */
 .header {
- 
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -16,30 +15,26 @@
   transition: background-color 0.3s ease;
   color: white;
   border-radius: 36px;
-
 }
 .header.scrolled .nav-menu .nav-link {
   color: white;
 }
 .nav-item.active .nav-link {
- background-color: #282c34;
- color: white;
- border-radius: 36px;
- 
+  background-color: #282c34;
+  color: white;
+  border-radius: 36px;
 }
 .nav-item .nav-link {
   color: #000000; /* Default link color */
   transition: color 0.3s ease;
-  background:#a5c7dd;
+  background: #a5c7dd;
   border-radius: 36px;
-  
 }
-
 .nav-item:hover .nav-link {
   color: #ffffff; /* Example hover color, adjust as needed */
-  
   border-radius: 36px;
 }
+
 /* Navbar container */
 .navbar {
   display: flex;
@@ -49,9 +44,6 @@
   width: 100%;
   max-width: 1200px;
 }
-
-/* Logo styling */
-
 
 /* Menu container */
 .nav-menu {
@@ -81,64 +73,54 @@
 /* Link hover and active state */
 .nav-link:hover,
 .nav-link:active {
-  background:#a5c7dd;
+  background: #a5c7dd;
   color: #fdfdfd;
 }
 
 /* Responsive design */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+  .close-icon {
+    display: none; /* Hide close icon on large screens */
+  }
+}
+
 @media (max-width: 768px) {
   .nav-menu {
-    display: none; /* Hide the menu by default */
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    margin-right: 6%;
+    background-color: #a5c7dd3e;
+    width: 40%;
+    border-radius: 30px;
   }
 
   .nav-menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #282c34;
-    position: absolute;
-    top: 70px; /* Adjust based on header height */
-    right: 0;
-    width: 100%;
-    padding: 1rem 0;
+    display: none;
   }
 
   .nav-item {
     margin: 0.5rem 0;
   }
-}
 
-/* Hamburger menu icon */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background: #ffffff;
-  margin: 3px;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
+  .close-icon {
+    display: block; /* Show close icon on small screens */
   }
 }
-/* Header.css */
-/* Header.css */
-/* Header.css */
-/* Header.css */
+
+/* Loading overlay */
 .loading-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background:#bce2fa;
+  background: #bce2fa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,6 +147,8 @@
   border-bottom-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity for the second triangle */
   animation-delay: -0.75s; /* Adjust delay to create the spinning effect */
 }
+
+/* Popup overlay */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -194,11 +178,10 @@
   color: #000;
 }
 
-
-.close-icon{
- cursor: pointer;
- color: #000;
-margin-left: 89%;
+.close-icon {
+  cursor: pointer;
+  color: #000;
+  margin-left: 89%;
 }
 
 @keyframes spin {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import QRCode from 'qrcode.react';
 import './Header.css';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const Header: React.FC = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -92,6 +92,9 @@ const Header: React.FC = () => {
       ) : (
         <header className={`header ${scrolled ? 'scrolled' : ''}`}>
           <nav className="navbar">
+            <div className="menu-icon" onClick={toggleMenu}>
+              {menuActive ? <AiOutlineClose size={24} className="close-icon" /> : <AiOutlineMenu size={24} className="menu-toggle" />}
+            </div>
             <div className={`nav-menu ${menuActive ? 'active' : ''}`}>
               <ul className="nav-menu">
                 <li className={`nav-item ${activeNav === '/' ? 'active' : ''}`} onClick={() => handleNavClick('/')}>
@@ -108,19 +111,13 @@ const Header: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="hamburger" onClick={toggleMenu}>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
           </nav>
           {showPopup && (
-            <div className="popup-overlay">
-              <div className="popup-content">
-                <AiOutlineClose onClick={closePopup} size={24} className='close-icon'/>
+            <div className="popup-overlay" onClick={closePopup}>
+              <div className="popup-content" onClick={(e) => e.stopPropagation()}>
                 <h2>Scan Me</h2>
-                <p>To get My contacts and address </p>
-                <QRCode value="https://rb.gy/l0l2v3" className='qr-code' size={156} />
+                <p>To get My contacts and address</p>
+                <QRCode value="https://rb.gy/l0l2v3" className="qr-code" size={156} />
               </div>
             </div>
           )}

@@ -6,10 +6,15 @@ const Services: React.FC = () => {
     <section className="services">
       <h2>What I Do</h2>
       <div className="service-cards">
-      <div><img src="image/card-1.png" className="card-1" /></div>
-      <div><img src="image/card-2.png" className="card-2" /></div>
-      <div><img src="image/card-3.png" className='car-3' /></div>
-
+        <div className="card">
+          <img src="image/card-1.png" alt="Service 1" />
+        </div>
+        <div className="card">
+          <img src="image/card-2.png" alt="Service 2" />
+        </div>
+        <div className="card">
+          <img src="image/card-3.png" alt="Service 3" />
+        </div>
       </div>
     </section>
   );
